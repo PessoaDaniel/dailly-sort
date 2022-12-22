@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;0,900;1,100;1,700;1,900&display=swap');
+:root {
+    --primary: #563b96;
+    --primary-hover: #3b2869;
+}
+
+* {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 600;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: 1px solid var(--primary);
+}
+@keyframes default-button-cahnge {
+    from {
+     background: var(--primary);
+     border: 1px solid var(--primary);
+    } 
+    to {
+     background: var(--dark);
+     border: 1px solid var(--dark);
+    }
+ }
+ @keyframes dark-button-cahnge {
+    from {
+        background: var(--dark);
+        border: 1px solid var(--dark);
+       }
+    to {
+     background: var(--primary);
+     border: 1px solid var(--primary);
+    }    
+ }
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+    background: var(--dark);
+    border: 1px solid var(--dark);
+    animation: default-button-cahnge 1s;
+}
+.btn-dark:hover,
+.btn-dark:active,
+.btn-dark:focus{
+    background: var(--primary);
+    border: 1px solid var(--primary);
+    animation: dark-button-cahnge 1s;
+}
+

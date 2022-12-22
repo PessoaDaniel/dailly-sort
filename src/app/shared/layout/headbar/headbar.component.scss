@@ -1,0 +1,14 @@
+.headbar {
+    background: #f1f1f1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-height: 5%;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+    
+    button {
+        margin: 0 5px 0 5px  !important;
+        font-weight: bolder;
+    }
+}

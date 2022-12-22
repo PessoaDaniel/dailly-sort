@@ -1,0 +1,23 @@
+.container-fluid {
+    min-height: 100vh !important;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0;
+    #side-content {
+        background: var(--dark);
+        border-left: 10px solid #6f4dc0;
+        height: 100%s;
+        padding: 0;
+    }
+    #content {
+        padding: 0;
+        padding-left: 10px;
+        background: #f1f1f1;
+        padding-left: 10px ins; 
+        height: 100%;
+        max-height: 95%;
+        #page {
+         height: 100%
+        };
+    }
+}
