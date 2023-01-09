@@ -1,11 +1,53 @@
-<div id="profillers">
-    <div class=" card card-profiler">
-        <p>p</p>
-    </div>
+<div class="row" *ngIf="showSpin">
+    <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#6610f2" type = "ball-zig-zag" [fullScreen]="false"><p style="color: #fff" > Sorteando</p></ngx-spinner>
 </div>
-<div class="row">
-    <button class="btn btn-success">
-        <i class="fa fa-dice"></i>
+<div class="row" id="card-zone" *ngIf="showCards" (click)="slide($event)">
+    <section class="col col-md-2">
+        <div class="card" id="admin">
+            <div class="card-title">
+                <i class="fas fa-user-circle fa-3x"></i>
+                <p>Condutor</p>
+            </div>
+            <div class="card-body">
+                <p>Daniel Pessoa</p>
+            </div>
+        </div>
+    </section>
+    <section class="col col-md-2" *ngIf="showAll">
+        <div class="card">
+            <div class="card-title">
+                <i class="fas fa-user-circle fa-3x"></i>
+                <p>2ª Apresentação</p>
+            </div>
+            <div class="card-body">
+                <p>Natanael Neto</p>
+            </div>
+        </div>
+    </section>
+    <section class="col col-md-2" *ngIf="showAll" #lastToPresent>
+        <div class="card bg-dark">
+            <div class="card-title">
+                <i class="fas fa-user-circle fa-3x"></i>
+                <p>Última Apresentação</p>
+            </div>
+            <div class="card-body">
+                <p>Matheus Amorim</p>
+            </div>
+        </div>
+    </section>
+    <section class="col col-md-2" *ngIf="!showAll">
+        <button class="btn" id="next-btn" (click)="getNexToPresent()">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </section>
+</div>
+<div class="row" id="actions">
+    <button class="btn btn-success" *ngIf="!sortStarted" (click)="initSort()">
+        <i class="fas fa-dice" ></i>
         Iniciar Sorteio
+    </button>
+    <button class="btn btn-dark" *ngIf="sortStarted" (click)="initSort()">
+        <i class="fas fa-dice" ></i>
+        Novo Sorteio
     </button>
 </div>

@@ -1,0 +1,30 @@
+<div class="row" id="tb-act"  *ngIf="showParticipants">
+    <button class="btn btn-primary">
+        <i class="fas user-plus"></i> Novo Participante
+    </button>
+</div>
+<div class="row" id="tb-warp">
+<table class="table" *ngIf="showParticipants">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th class="tb-actions">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Daniel</td>
+            <td class="tb-actions">
+                <button class="btn btn-primary">
+                    Editar
+                </button>
+                <button class="btn btn-danger">
+                    Remover
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

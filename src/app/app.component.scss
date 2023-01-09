@@ -9,17 +9,13 @@
         padding: 0;
     }
     #content {
-        padding: 0;
-        padding-left: 10px;
-        background: #f1f1f1;
-        padding-left: 10px ins; 
         min-height: 100%;
-        #page{
-            display: flex;
-            justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        #router-content {
             height: 94%;
             width: 100%;
-            align-items: center;
         }
     }
 }

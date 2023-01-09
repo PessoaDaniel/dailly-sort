@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./headbar.component.scss']
 })
 export class HeadbarComponent implements OnInit {
+  showPart:boolean;
 
-  constructor() { }
+  constructor() {
+    this.showPart = false;
+   }
 
   ngOnInit(): void {
+  
+  }
+
+  showParticipants() {
+    this.showPart = !this.showPart;
   }
 
 }

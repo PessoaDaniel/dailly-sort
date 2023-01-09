@@ -1,19 +1,72 @@
 
-
-#profillers {
-    margin-bottom: 50px;
-    width: 100%;
+#card-zone  {
+    align-items: center;
+    justify-content: center;
+    height: 300px;
     display: flex;
-    align-items: flex-start;
-    .card  {
-        height: 300px;
-        padding: 20px;
-        width: 30%;
+    overflow: auto;
+    width: 100%;
+    section {
+        margin: 20px;
+        padding: 0;
+        .card {
+            cursor: pointer;
+            height: 250px;
+            text-align: center;
+            color: #fff;
+            background: var(--primary);
+            width: 180px;
+            .card-title {
+                padding-top: 15px;
+            }
+        }
+        #next-btn {
+            clip-path: circle(45%);
+            background: var(--primary);
+            color: #fff;
+            font-weight: bolder;
+        }
+        #admin {
+            background: var(--danger) !important;
+            color: #fff !important;
+        }
+        #admin:hover {
+            border: 2px solid var(--primary);
+        }
     }
+    div {
+        text-align: center;
+        i.fa-chevron-right {
+            color: var(--primary);
+        }
+    }
+}
+#card-zone::-webkit-scrollbar {
+    height: 10px;
+    background: transparent;
+    padding-left: 10px;
+    cursor: move;
+}
+#card-zone::-webkit-scrollbar-track {
+    background: transparent;
+    height: 10px;
+    padding-left: 10px;
+}
+#card-zone::-webkit-scrollbar-thumb {
+   background: var(--primary);
+   height: 10px; 
+   border-radius: 5px;
+   padding-left: 10px;
+   cursor: pointer;
+}
+#card-zone::-webkit-scrollbar-thumb:hover {
+    background: var(--dark);
+}
+#actions {
+    justify-content: center;
+    button {
+        font-weight: bold;
+        margin: 5px;
+    }
+}
 
-}
-button {
-    font-weight: bolder;
-    align-self: center;
-    justify-self: center;
-}

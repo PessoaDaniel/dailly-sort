@@ -1,8 +1,11 @@
 <nav class="headbar">
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-primary" (click)="showParticipants()">
         <i class="fas fa-dice"></i> Participantes
     </button>
     <button type="button" class="btn btn-dark">
         <i class="fa fa-gear"></i> Configurar Sorteio
     </button>
 </nav>
+<div>
+    <app-list [showParticipants]="showPart"></app-list>
+</div>

@@ -1,0 +1,18 @@
+[
+    {
+        "releaseDate": "2023-01-02",
+        "driver": "Daniel",
+        "week": {
+            "weekInit": "2023-01-02",
+            "weekFinal": "2023-01-06"
+        },
+        "presentationOrder" : [{
+            "position" : 0,
+            "profiler" : "Daniel"
+        },
+        {
+            "position" : 1,
+            "profiler" : "Matheus"
+        }]    
+    }
+]

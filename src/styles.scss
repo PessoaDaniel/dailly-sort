@@ -10,6 +10,9 @@
    font-family: 'Roboto', sans-serif;
    font-weight: 600;
 }
+body {
+    background: #f1f1f1;
+}
 
 .btn-primary {
     background: var(--primary);
@@ -40,13 +43,13 @@
 .btn-primary:focus{
     background: var(--dark);
     border: 1px solid var(--dark);
-    animation: default-button-cahnge 1s;
+    animation: default-button-cahnge 300ms;
 }
 .btn-dark:hover,
 .btn-dark:active,
 .btn-dark:focus{
     background: var(--primary);
     border: 1px solid var(--primary);
-    animation: dark-button-cahnge 1s;
+    animation: dark-button-cahnge 300ms;
 }
 

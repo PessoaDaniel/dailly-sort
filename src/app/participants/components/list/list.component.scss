@@ -1,0 +1,25 @@
+#tb-act {
+    padding:  20px;
+    justify-content: flex-end;
+}
+#tb-warp {
+    height: 150px;
+    overflow: auto;
+}
+tr {
+    line-height: 5px;
+    th {
+        background: var(--primary);
+        color: #fff;
+    }
+    td {
+        button {
+          margin-left: 10px;
+          font-weight: bold;
+        }
+    }
+}
+.tb-actions {
+    text-align: right;
+    justify-content: right;
+}
