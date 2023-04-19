@@ -1,4 +1,26 @@
-[{
-   "name" : "Daniel Pessoa",
-   "canDrive": true
-}]
+[
+   {
+      "name" : "Daniel Pessoa",
+      "isFirst": false
+   },
+   {
+      "name" : "Matheus Amorim",
+      "isFirst": false
+   },
+   {
+      "name" : "David Silva",
+      "isFirst": false
+   },
+   {
+      "name" : "Dola Lima",
+      "isFirst": false
+   },
+   {
+      "name" : "Natanael Neto",
+      "isFirst": false
+   },
+   {
+      "name" : "Carlos Silva",
+      "isFirst": false
+   }
+]

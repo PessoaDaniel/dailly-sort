@@ -2,51 +2,33 @@
     <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#6610f2" type = "ball-zig-zag" [fullScreen]="false"><p style="color: #fff" > Sorteando</p></ngx-spinner>
 </div>
 <div class="row" id="card-zone" *ngIf="showCards" (click)="slide($event)">
-    <section class="col col-md-2">
-        <div class="card" id="admin">
+    <section class="col col-md-1"  *ngFor="let participant of participants">
+        <div class="card" id="admin" *ngIf="participants.indexOf(participant) == 0;">
             <div class="card-title">
                 <i class="fas fa-user-circle fa-3x"></i>
                 <p>Condutor</p>
             </div>
             <div class="card-body">
-                <p>Daniel Pessoa</p>
+                <p>{{participant.name}}</p>
             </div>
         </div>
-    </section>
-    <section class="col col-md-2" *ngIf="showAll">
-        <div class="card">
+        <div class="card"  *ngIf="participants.indexOf(participant) != 0;">
             <div class="card-title">
                 <i class="fas fa-user-circle fa-3x"></i>
-                <p>2ª Apresentação</p>
+                <p>{{participants.indexOf(participant) + 1}}ª Apresentação</p>
             </div>
             <div class="card-body">
-                <p>Natanael Neto</p>
+                <p>{{participant.name}}</p>
             </div>
         </div>
-    </section>
-    <section class="col col-md-2" *ngIf="showAll" #lastToPresent>
-        <div class="card bg-dark">
-            <div class="card-title">
-                <i class="fas fa-user-circle fa-3x"></i>
-                <p>Última Apresentação</p>
-            </div>
-            <div class="card-body">
-                <p>Matheus Amorim</p>
-            </div>
-        </div>
-    </section>
-    <section class="col col-md-2" *ngIf="!showAll">
-        <button class="btn" id="next-btn" (click)="getNexToPresent()">
-            <i class="fas fa-arrow-right"></i>
-        </button>
     </section>
 </div>
 <div class="row" id="actions">
-    <button class="btn btn-success" *ngIf="!sortStarted" (click)="initSort()">
+    <button class="btn btn-success" *ngIf="!sortStarted" (click)="sort()">
         <i class="fas fa-dice" ></i>
         Iniciar Sorteio
     </button>
-    <button class="btn btn-dark" *ngIf="sortStarted" (click)="initSort()">
+    <button class="btn btn-dark" *ngIf="sortStarted" (click)="sort()">
         <i class="fas fa-dice" ></i>
         Novo Sorteio
     </button>
