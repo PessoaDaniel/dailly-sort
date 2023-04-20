@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
-import participants from '../../../json/participans.json';
+import avaliableParts from '../../../json/participans.json';
 
 @Component({
   selector: 'app-sigle',
@@ -8,44 +8,69 @@ import participants from '../../../json/participans.json';
   styleUrls: ['./sigle.component.scss']
 })
 export class SigleComponent implements OnInit {
-  participants:Array<any>;
-  showCards:boolean;
-  sortStarted:boolean;
-  sortFinished:boolean;   
-  showAll:boolean;
-  showSpin:boolean;
+  participants: Array<any>;
+  showCards: boolean;
+  sortStarted: boolean;
+  sortFinished: boolean;
+  showAll: boolean;
+  showSpin: boolean;
+  presenters: any = [];
 
 
-  constructor(private spinner: NgxSpinnerService) { 
+  constructor(private spinner: NgxSpinnerService) {
     this.showCards = false;
     this.sortStarted = false;
     this.sortFinished = false;
     this.showAll = false;
     this.showSpin = false;
-    this.participants = participants;
+    this.participants = avaliableParts;
   }
 
   ngOnInit(): void {
     this.spinner.show()
   }
-  
+
   initSort() {
     this.sortStarted = true;
     this.showCards = true;
   }
 
-  getNexToPresent(){
-
-  }
-  slide($event: Event){
-    let target = $event.target; 
+  slide($event: Event) {
+    let target = $event.target;
   }
 
   sort() {
-    participants.sort(() => {
-      return - 1
-    });
-    this.initSort();
+    if (this.participants.length > 0) {
+      let random = this.shuffle(this.participants);
+      this.presenters.push(random[0]);
+      random.shift();
+      this.participants = random;
+      this.initSort();
+      // setTimeout(() => {
+      //   this.initSort();
+      //   this.showSpin = false;
+      // }, 700);
+    }
   }
 
+  private shuffle(array: any) {
+    let currentIndex = array.length, randomIndex;
+
+    while (currentIndex != 0) {
+
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+  }
+
+  reset() {
+    this.participants = avaliableParts;
+    this.presenters = [];
+    this.sort();
+  }
 }

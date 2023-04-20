@@ -36,9 +36,6 @@
             background: var(--danger) !important;
             color: #fff !important;
         }
-        #admin:hover {
-            border: 2px solid var(--primary);
-        }
     }
     div {
         text-align: center;
@@ -74,5 +71,8 @@
         font-weight: bold;
         margin: 5px;
     }
+}
+.card {
+    border-radius: 20px;
 }
 
