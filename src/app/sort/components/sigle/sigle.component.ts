@@ -46,10 +46,6 @@ export class SigleComponent implements OnInit {
       random.shift();
       this.participants = random;
       this.initSort();
-      // setTimeout(() => {
-      //   this.initSort();
-      //   this.showSpin = false;
-      // }, 700);
     }
   }
 
@@ -69,8 +65,6 @@ export class SigleComponent implements OnInit {
   }
 
   reset() {
-    this.participants = avaliableParts;
-    this.presenters = [];
-    this.sort();
+    window.location.reload();
   }
 }
