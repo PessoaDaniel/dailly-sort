@@ -9,7 +9,7 @@
                 <p>Condutor</p>
             </div>
             <div class="card-body">
-                <p>{{participant.name}}</p>
+                <p>{{participant._name}}</p>
             </div>
         </div>
         <div class="card"  *ngIf="presenters.indexOf(participant) != 0;">
@@ -18,7 +18,7 @@
                 <p>{{presenters.indexOf(participant) + 1}}ª Apresentação</p>
             </div>
             <div class="card-body">
-                <p>{{participant.name}}</p>
+                <p>{{participant._name}}</p>
             </div>
         </div>
     </section>

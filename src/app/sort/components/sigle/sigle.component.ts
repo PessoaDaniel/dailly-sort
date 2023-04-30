@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
 import avaliableParts from '../../../json/participans.json';
+import {ParticipantsService} from "../../../shared/services/participants.service";
 
 @Component({
   selector: 'app-sigle',
@@ -8,7 +9,7 @@ import avaliableParts from '../../../json/participans.json';
   styleUrls: ['./sigle.component.scss']
 })
 export class SigleComponent implements OnInit {
-  participants: Array<any>;
+  participants: any;
   showCards: boolean;
   sortStarted: boolean;
   sortFinished: boolean;
@@ -17,17 +18,21 @@ export class SigleComponent implements OnInit {
   presenters: any = [];
 
 
-  constructor(private spinner: NgxSpinnerService) {
+  constructor(private spinner: NgxSpinnerService,
+              private participantsService: ParticipantsService) {
     this.showCards = false;
     this.sortStarted = false;
     this.sortFinished = false;
     this.showAll = false;
     this.showSpin = false;
-    this.participants = avaliableParts;
   }
 
   ngOnInit(): void {
-    this.spinner.show()
+    this.participantsService.getAllUsers().subscribe(
+    {
+      next: response => this.participants = response,
+      error: error => console.error(error.message)
+    });
   }
 
   initSort() {

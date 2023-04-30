@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { HeadbarComponent } from './layout/headbar/headbar.component';
 import { RouterModule } from '@angular/router';
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
-    ParticipantsModule
+    ParticipantsModule,
+    HttpClientModule
   ],
   exports:[
     SidebarComponent,
