@@ -1,9 +1,12 @@
+.container-fluid {
+    padding-right: 0;
+}
 #nav {
     height: 100%;
     display: flex;
     flex-direction: column;
     color: #fff;
-    padding-top: 20px;
+    padding-top: 3.1em;
     #brand {
         width: 100%;
         min-height: 20%;
@@ -40,8 +43,41 @@
                 margin: 0;
             }
         }
-        .nav-item.active {
-            background: #029481;
+        // .nav-item.active {
+        //     background: #029481;
+        // }
+
+        
+
+    }
+    #actions {
+        padding-top: 2em;
+        background:transparent; 
+        display: flex;
+        height: 47em;
+        overflow-y: auto;
+        flex-direction: column;
+
+        
+        .action {
+            margin: 0.5em 0;
+            background: #000;
+            height: 10%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding: 5px;
+            width: 100%;
+            border-radius: 2em 0 0 2em;
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
         }
-    } 
+        .action:has(a.active),
+        .action:hover {
+            cursor: pointer;
+            background: linear-gradient(90deg, #000, var(--primary),  var(--primary),  #000 );
+        }
+     } 
 }
