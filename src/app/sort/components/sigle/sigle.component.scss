@@ -4,6 +4,9 @@
     justify-content: center;
     display: flex;
     overflow: auto;
+    padding-top: 20%;
+    height: 100%;
+    box-sizing: border-box;
     width: 100%;
     @media (min-width: 768px) {
         .col-md-1 {
