@@ -1,5 +1,5 @@
 .container-fluid {
-    padding-right: 0;
+    padding: 10px 0;
 }
 #nav {
     height: 100%;
@@ -28,7 +28,6 @@
         flex-direction: column;
         .nav-item {
             align-self: flex-start;
-            margin-left: 5%;
             height: 8%;
             cursor: pointer;
             margin-bottom: 5px;
@@ -43,11 +42,6 @@
                 margin: 0;
             }
         }
-        // .nav-item.active {
-        //     background: #029481;
-        // }
-
-        
 
     }
     #actions {
@@ -57,27 +51,36 @@
         height: 47em;
         overflow-y: auto;
         flex-direction: column;
-
-        
         .action {
-            margin: 0.5em 0;
-            background: #000;
+            margin-bottom: 0;
             height: 10%;
             align-items: center;
-            justify-content: center;
+            justify-content: left;
             display: flex;
-            padding: 5px;
             width: 100%;
-            border-radius: 2em 0 0 2em;
             a {
+                i {
+                    margin-right: 10px;
+                    font-size: 24px;
+                }
+                i.active {
+                    color: #7550cb;
+                }
+                height: 100%;
                 text-decoration: none;
                 color: #fff;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                padding-left: 10px;
             }
         }
         .action:has(a.active),
         .action:hover {
             cursor: pointer;
-            background: linear-gradient(90deg, #000, var(--primary),  var(--primary),  #000 );
+        }
+        a.active {
+            background: #000000;
         }
      } 
 }
