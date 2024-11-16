@@ -6,13 +6,15 @@ import { SortRoutingModule } from './sort-routing.module';
 import { SortComponent } from './sort.component';
 import { SigleComponent } from './components/sigle/sigle.component';
 import { WeeklyComponent } from './components/weekly/weekly.component';
+import { ScrumPokerComponent } from './components/scrum-poker/scrum-poker.component';
 
 
 @NgModule({
   declarations: [
     SortComponent,
     SigleComponent,
-    WeeklyComponent
+    WeeklyComponent,
+    ScrumPokerComponent,
   ],
   imports: [
     CommonModule,

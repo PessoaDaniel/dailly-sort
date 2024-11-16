@@ -1,0 +1,68 @@
+@keyframes card-animate {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+}
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+}
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  i {
+    font-size: 25px;
+  }
+  * {
+    margin: 0 5px;
+  }
+}
+#heart {
+  color: red;
+}
+.title {
+  margin-bottom: 25px;
+}
+.poker-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 18px;
+  row-gap: 18px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+.poker-card {
+  display: flex;
+  flex-direction: column;
+  border: 3px dashed #7550cb;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  border-radius: 7px;
+  padding: 10px;
+  background: whitesmoke;
+  cursor: pointer;
+  .row {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding-left: 10px;
+    i {
+      font-size: 20px;
+      color: #7550cb;
+    }
+  }
+}
+.poker-card:hover {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  animation: card-animate 500ms;
+}

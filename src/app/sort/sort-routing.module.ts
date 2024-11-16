@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SigleComponent } from './components/sigle/sigle.component';
 import { WeeklyComponent } from './components/weekly/weekly.component';
 import { SortComponent } from './sort.component';
+import {ScrumPokerComponent} from "./components/scrum-poker/scrum-poker.component";
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'weekly',
         component: WeeklyComponent
+      },
+      {
+        path: 'poker',
+        component: ScrumPokerComponent
       },
       {
         path: '**',
