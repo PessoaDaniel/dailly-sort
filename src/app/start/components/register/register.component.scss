@@ -1,0 +1,47 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 100px 4rem;
+  justify-content: flex-start;
+  align-items: center;
+  .form-container {
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    border-radius: 15px;
+    padding: 20px 45px ;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    .row {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+.back {
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--primary);
+}
+.f-center {
+  justify-content: center;
+  text-align: right;
+}
+.f-center.f-column {
+  align-items: center;
+  flex-direction: column;
+  p {
+    margin-bottom: 0.1rem !important;
+  }
+}
+.title {
+  color: #7550cb;
+  font-size: 20px;
+}
+.sub-title {
+  font-size: 15px;
+  font-weight: lighter;
+  color: black;
+  text-align: center;
+}
