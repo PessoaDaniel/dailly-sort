@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../../services/auth.service";
+import {ActionsService} from "../../services/actions.service";
 
 @Component({
   selector: 'app-headbar',
@@ -6,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./headbar.component.scss']
 })
 export class HeadbarComponent implements OnInit {
-  showPart:boolean;
+  showLogin:boolean = false;
 
-  constructor() {
-    this.showPart = false;
-   }
+  constructor(
+      private authService: AuthService,
+      private actionsService: ActionsService
+  ) {}
 
   ngOnInit(): void {
-  
-  }
-
-  showParticipants() {
-    this.showPart = !this.showPart;
+    this.actionsService.showLoginMenu.subscribe({
+      next: showLogin => {
+        this.showLogin = showLogin;
+      }});
   }
 
 }

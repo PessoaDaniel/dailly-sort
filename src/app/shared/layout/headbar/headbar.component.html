@@ -1,10 +1,10 @@
 <nav class="headbar">
-    <div>
-        <button type="button" class="btn-primary">
+    <div *ngIf="showLogin">
+        <button type="button" class="btn-primary" routerLink="start/register">
             Cadastrar-se
         </button>
-        <a type="button">
-            Entrar
+        <a routerLink="start/login">
+            Entrar <i class="fa-solid fa-arrow-right-to-bracket"></i>
         </a>
     </div>
 </nav>

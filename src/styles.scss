@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css  ');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,700;0,900;1,100;1,700;1,900&display=swap');
 :root {
     --primary: #563b96;
@@ -18,7 +18,7 @@ body {
 .btn-primary {
     background: var(--primary);
     border: 1px solid var(--primary);
-    border-radius: 25px;
+    border-radius: 70px;
     height: 35px;
 }
 .btn-dark {

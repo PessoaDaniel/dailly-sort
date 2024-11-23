@@ -11,4 +11,11 @@
         margin: 0 15px 0 15px  !important;
         font-weight: bolder;
     }
+    a {
+        text-decoration: none;
+        color: var(--dark);
+    }
+    a:hover {
+        color: var(--primary);
+    }
 }

@@ -2,18 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import {ActionsService} from "../../../shared/services/actions.service";
 
 @Component({
-  selector: 'app-wellcome',
-  templateUrl: './wellcome.component.html',
-  styleUrls: ['./wellcome.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class WellcomeComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   constructor(
       private actionsService: ActionsService,
   ) { }
 
   ngOnInit(): void {
-    this.actionsService.showLoginMenu.next(true);
+    this.actionsService.showLoginMenu.next(false);
   }
 
 }
