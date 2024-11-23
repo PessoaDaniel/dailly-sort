@@ -18,7 +18,13 @@ body {
 .btn-primary {
     background: var(--primary);
     border: 1px solid var(--primary);
-    border-radius: 7px;
+    border-radius: 25px;
+    height: 35px;
+}
+.btn-dark {
+    background: var(--dark);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
     height: 35px;
 }
 @keyframes default-button-cahnge {
