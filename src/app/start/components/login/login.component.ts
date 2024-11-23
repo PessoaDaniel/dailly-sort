@@ -20,4 +20,7 @@ export class LoginComponent implements OnInit {
    goBack() {
     this._location.back();
    }
+   doLogin() {
+
+   }
 }
