@@ -22,10 +22,16 @@ const routes: Routes = [
       {
         path: 'login',
         component: LoginComponent,
+        data: {
+          animation: 'loginPage'
+        }
       },
       {
         path: 'register',
         component: RegisterComponent,
+        data: {
+          animation: 'loginPage'
+        }
       }
     ]
   }
