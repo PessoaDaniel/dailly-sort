@@ -1,0 +1,19 @@
+<div class="page">
+    <div class="content">
+        <div class="presentation-container"></div>
+        <div class="cards-container">
+            <div class="card"></div>
+        </div>
+    </div>
+    <div class="participants">
+        <div class="participant ">
+            <video id="mainVideo"></video>
+            <div class="video-controller">
+                <button class="btn-primary" [class.videoOff]="isVideoOff" (click)="offVideo()">
+                    <i class="fa-solid fa-video"></i>
+                </button>
+            </div>
+        </div>
+        <div class="participant"></div>
+    </div>
+</div>

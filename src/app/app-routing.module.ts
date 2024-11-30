@@ -20,6 +20,11 @@ const routes: Routes = [
     loadChildren: () => import('./members/members.module').then(m => m.MembersModule)
   },
   {
+    path: 'meet',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./meet/meet.module').then(m => m.MeetModule)
+  },
+  {
     path: 'start',
     loadChildren: () => import('./start/start.module').then(m => m.StartModule)
   },

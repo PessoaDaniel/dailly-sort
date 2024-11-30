@@ -1,0 +1,70 @@
+.page {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  * {
+    margin: 0 10px;
+  }
+  .content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    * {
+      margin: 5px ;
+    }
+    .presentation-container {
+      display: flex;
+      height: 70%;
+      width: 100%;
+      border-radius: 5px;
+      border: 5px dashed #7550cb;
+    }
+    .cards-container {
+      display: flex;
+      flex-direction: row;
+      border: 5px solid #343A40;
+      height: 30%;
+      margin-right: 0;
+      border-radius: 5px;
+      background-color: #343A40;
+      .card {
+        display: flex;
+      }
+    }
+  }
+  .participants {
+    display: block;
+    height: 100%;
+    width: 40%;
+    border-radius: 5px;
+    overflow-y: auto;
+    .participant {
+      margin: 10px 10px 10px 0;
+      border: 5px solid lightgray;
+      border-radius: 5px;
+      height: 150px;
+      background-color: #343A40;
+      display: flex;
+      flex-direction: column;
+      video {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: 0;
+      }
+      .video-controller {
+        display: flex;
+        position: relative;
+        width: 100%;
+        top: -50px;
+        align-items: center;
+        justify-content: center;
+      }
+      button.videoOff {
+        background-color: red;
+      }
+    }
+  }
+}
