@@ -7,4 +7,9 @@
             Entrar <i class="fa-solid fa-arrow-right-to-bracket"></i>
         </a>
     </div>
+    <div *ngIf="!showLogin">
+        <a (click)="signOut()">
+            Sair <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </a>
+    </div>
 </nav>

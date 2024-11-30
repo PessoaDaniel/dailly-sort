@@ -15,9 +15,9 @@ export class SidebarComponent implements OnInit {
       ) {}
 
   ngOnInit(): void {
-    if (this.authService.isLoggedIn()) {
-        this.showMenu = true;
-    }
+    this.authService.signImBehavior.subscribe((isLoggedIn: boolean) => {
+      this.showMenu = isLoggedIn;
+    });
   }
 
 }

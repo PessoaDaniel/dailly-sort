@@ -24,7 +24,7 @@ const routes: Routes = [
         component: WeeklyComponent
       },
       {
-        path: 'poker',
+        path: 'poker/list',
         component: ScrumPokerComponent
       },
       {

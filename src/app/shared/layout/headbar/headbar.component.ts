@@ -22,4 +22,7 @@ export class HeadbarComponent implements OnInit {
       }});
   }
 
+  signOut() {
+    this.authService.signOut();
+  }
 }
