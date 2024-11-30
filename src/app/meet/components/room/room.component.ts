@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-room',
@@ -17,7 +17,7 @@ export class RoomComponent implements OnInit {
   }
 
   async  setupCamera () {
-    const userMediaStream =  await navigator.mediaDevices.getUserMedia({
+    this.mainVideoRef.srcObject = await navigator.mediaDevices.getUserMedia({
       video: {
         width: {
           min: this.mainVideoRef.offsetWidth,
@@ -32,7 +32,6 @@ export class RoomComponent implements OnInit {
       },
       audio: false
     });
-    this.mainVideoRef.srcObject = userMediaStream;
     this.mainVideoRef.play();
 
   }
