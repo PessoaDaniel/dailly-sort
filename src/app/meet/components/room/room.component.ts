@@ -39,8 +39,13 @@ export class RoomComponent implements OnInit {
 
   offVideo() {
     if (!this.isVideoOff) {
-     this.mainVideoRef.srcObject.getTracks()[0].stop();
-     this.mainVideoRef.srcObject = undefined;
+      this.mainVideoRef.srcObject.getTracks()[0].applyConstraints({
+        advanced: [
+
+        ]
+      });
+      this.mainVideoRef.srcObject.getTracks()[0].stop();
+     this.mainVideoRef.srcObject = null;
     } else {
       this.setupCamera().then(()=> {
         if (this.isVideoOff) {
