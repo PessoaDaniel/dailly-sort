@@ -13,7 +13,7 @@ export class RoomComponent implements OnInit {
 
   ngOnInit(): void {
     this.mainVideoRef = document.getElementById('mainVideo');
-    this.setupCamera();
+    this.setupCamera().then();
   }
 
   async  setupCamera () {
