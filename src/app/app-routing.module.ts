@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {AuthGuard} from "./shared/guards/auth.guard";
+import {Error404Component} from "./shared/error404/error404.component";
 
 const routes: Routes = [
   {
@@ -24,8 +25,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'sort',
-    pathMatch: 'full'
+    component: Error404Component
   }
 ];
 
