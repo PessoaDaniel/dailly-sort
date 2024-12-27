@@ -17,7 +17,7 @@ export class RoomComponent implements OnInit {
   }
 
   async  setupCamera () {
-    this.mainVideoRef.srcObject = await navigator.mediaDevices.getUserMedia({
+    let stream = await navigator.mediaDevices.getUserMedia({
       video: {
         width: {
           min: this.mainVideoRef.offsetWidth,
@@ -27,11 +27,13 @@ export class RoomComponent implements OnInit {
           min: this.mainVideoRef.offsetHeight,
           ideal: 768
         },
-        facingMode: "environment",
+        facingMode: "user",
         latency: 1000
       },
       audio: false
     });
+    this.mainVideoRef.srcObject = stream;
+    stream.getTracks()[0].
     this.mainVideoRef.play();
 
   }
