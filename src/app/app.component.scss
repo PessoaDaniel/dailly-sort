@@ -2,22 +2,16 @@
     display: flex;
     padding: 0;
     height: 100vh;
-
     #side-content {
         background: var(--dark);
         height: 100%;
-        width: 20rem;
+        width: 20%;
         padding: 0;
     }
     #content {
-        min-height: 100%;
+        padding: 0 10px;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        padding: 0 0 0 2rem;
-        #router-content {
-            height: 94%;
-            width: 100%;
-        }
+        width: 80%;
     }
 }

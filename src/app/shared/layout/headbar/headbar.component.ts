@@ -9,6 +9,7 @@ import {ActionsService} from "../../services/actions.service";
 })
 export class HeadbarComponent implements OnInit {
   showLogin:boolean = false;
+  isLoggedIn = false;
 
   constructor(
       private authService: AuthService,
@@ -19,6 +20,9 @@ export class HeadbarComponent implements OnInit {
     this.actionsService.showLoginMenu.subscribe({
       next: showLogin => {
         this.showLogin = showLogin;
+        if (this.authService.isLoggedIn()) {
+         this.isLoggedIn = true;
+        }
       }});
   }
 

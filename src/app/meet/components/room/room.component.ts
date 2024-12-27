@@ -33,7 +33,7 @@ export class RoomComponent implements OnInit {
       audio: false
     });
     this.mainVideoRef.srcObject = stream;
-    stream.getTracks()[0].
+    // stream.getTracks()[0]
     this.mainVideoRef.play();
 
   }

@@ -15,6 +15,7 @@ export class SigleComponent implements OnInit {
   showAll: boolean;
   showSpin: boolean;
   presenters: any = [];
+  finished = false;
 
 
   constructor(private spinner: NgxSpinnerService) {
@@ -46,6 +47,9 @@ export class SigleComponent implements OnInit {
       random.shift();
       this.participants = random;
       this.initSort();
+      this.finished = false;
+    } else {
+      this.finished = true;
     }
   }
 
